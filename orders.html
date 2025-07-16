@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Orders - Flipkart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2874f0;
+            padding: 15px;
+            text-align: center;
+            color: white;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #2874f0;
+            color: white;
+            padding: 10px;
+        }
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            background-color: #2874f0;
+            padding: 12px 30px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Your Orders</h1>
+</header>
+
+<div class="container">
+    <div class="sidebar">
+        <h2>Filters</h2>
+
+        <h3>ORDER STATUS</h3>
+        <input type="checkbox" id="onTheWay">
+        <label for="onTheWay">On the way</label><br>
+        <input type="checkbox" id="delivered">
+        <label for="delivered">Delivered</label><br>
+        <input type="checkbox" id="cancelled">
+        <label for="cancelled">Cancelled</label><br>
+        <input type="checkbox" id="returned">
+        <label for="returned">Returned</label><br><br>
+
+        <h3>ORDER TIME</h3>
+        <input type="checkbox" id="last30Days">
+        <label for="last30Days">Last 30 days</label><br>
+        <input type="checkbox" id="2024">
+        <label for="2024">2024</label><br>
+        <input type="checkbox" id="2023">
+        <label for="2023">2023</label><br>
+        <input type="checkbox" id="2022">
+        <label for="2022">2022</label><br>
+        <input type="checkbox" id="2021">
+        <label for="2021">2021</label><br>
+        <input type="checkbox" id="older">
+        <label for="older">Older</label><br>
+    </div>
+
+    <div class="content">
+        <input type="text" placeholder="Search your orders..." id="searchBar">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Order Date</th>
+                    <th>Order Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#1001</td>
+                    <td>Samsung Galaxy S23</td>
+                    <td>1</td>
+                    <td>Rs. 72,999</td>
+                    <td>02 March 2025</td>
+                    <td style="color: green;">Delivered</td>
+                </tr>
+                <tr>
+                    <td>#1002</td>
+                    <td>HP Pavilion Laptop</td>
+                    <td>1</td>
+                    <td>Rs. 62,499</td>
+                    <td>16 February 2025</td>
+                    <td style="color: orange;">Shipped</td>
+                </tr>
+                <tr>
+                    <td>#1003</td>
+                    <td>Boat Headphones</td>
+                    <td>2</td>
+                    <td>Rs. 3,499</td>
+                    <td>21 December 2024</td>
+                    <td style="color: green;">Delivered</td>
+                </tr>
+                <tr>
+                    <td>#1004</td>
+                    <td>Adidas Shoes</td>
+                    <td>1</td>
+                    <td>Rs. 4,499</td>
+                    <td>05 September 2024</td>
+                    <td style="color: red;">Cancelled</td>
+                </tr>
+                <tr>
+                    <td>#1005</td>
+                    <td>LG Refrigerator</td>
+                    <td>1</td>
+                    <td>Rs. 29,999</td>
+                    <td>01 June 2024</td>
+                    <td style="color: green;">Delivered</td>
+                </tr>
+                <tr>
+                    <td>#1006</td>
+                    <td>OnePlus Smartwatch</td>
+                    <td>1</td>
+                    <td>Rs. 14,999</td>
+                    <td>25 May 2024</td>
+                    <td style="color: green;">Delivered</td>
+                </tr>
+                <tr>
+                    <td>#1007</td>
+                    <td>Apple MacBook Air M2</td>
+                    <td>1</td>
+                    <td>Rs. 1,14,999</td>
+                    <td>15 March 2024</td>
+                    <td style="color: red;">Returned</td>
+                </tr>
+                <tr>
+                    <td>#1008</td>
+                    <td>Sony Bravia 55-inch TV</td>
+                    <td>1</td>
+                    <td>Rs. 79,999</td>
+                    <td>10 March 2024</td>
+                    <td style="color: green;">Delivered</td>
+                </tr>
+                <tr>
+                    <td>#1009</td>
+                    <td>Nike Running Shoes</td>
+                    <td>2</td>
+                    <td>Rs. 7,999</td>
+                    <td>03 March 2024</td>
+                    <td style="color: red;">Cancelled</td>
+                </tr>
+                <tr>
+                    <td>#1010</td>
+                    <td>Samsung Washing Machine</td>
+                    <td>1</td>
+                    <td>Rs. 35,999</td>
+                    <td>28 February 2024</td>
+                    <td style="color: green;">Delivered</td>
+                </tr>
+                <tr>
+                    <td>#1011</td>
+                    <td>Noise Smartwatch</td>
+                    <td>1</td>
+                    <td>Rs. 4,999</td>
+                    <td>20 February 2024</td>
+                    <td style="color: green;">Delivered</td>
+                </tr>
+                <tr>
+                    <td>#1012</td>
+                    <td>Home Centre Sofa Set</td>
+                    <td>1</td>
+                    <td>Rs. 54,999</td>
+                    <td>12 January 2024</td>
+                    <td style="color: red;">Returned</td>
+                </tr>
+                
+            </tbody>
+        </table>
+
+        <a href="flipkart.html">Go to Homepage</a>
+    </div>
+</div>
+
+</body>
+</html>

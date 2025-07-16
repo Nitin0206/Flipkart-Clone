@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAN Card Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            height: 100vh;
+        }
+        .sidebar a {
+            display: block;
+            padding: 10px 0;
+            text-decoration: none;
+            color: #000;
+        }
+        .sidebar a:hover {
+            background-color: #ddd;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        h2 {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+        input[type="text"], input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        h2 {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .declaration {
+            margin-top: 20px;
+        }
+        .declaration p {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="sidebar">
+        <h3>Hello, Nitin Kumar</h3>
+        <a href="profile.html">Profile Information</a>
+        <a href="address.html">Manage Addresses</a>
+        <a href="pan.html">PAN Card Information</a>
+        <a href="payments.html">Payments</a>
+        <a href="coupons.html">My Coupons</a>
+        <a href="logout.html">Logout</a>
+    </div>
+
+    <div class="content">
+        <h2>PAN Card Information</h2>
+
+        <h3>Enter PAN Card Details</h3>
+        <input type="text" id="pan-number" placeholder="PAN Card Number (e.g., ABCDE1234F)">
+        <input type="text" id="full-name" placeholder="Full Name as per PAN Card">
+        <br><br>
+        <label for="upload-pan">Upload PAN Card Photo:</label>
+        <input type="file" id="upload-pan">
+        
+        <div class="declaration">
+            <input type="checkbox" id="declaration"> I do hereby declare that the PAN furnished/stated above is correct and belongs to me, registered as an account holder with www.flipkart.com.<br>
+            I further declare that I shall solely be held responsible for the consequences, in case of any false PAN declaration.
+        </div>
+        <br>
+        <button onclick="uploadPAN()">Upload</button>
+
+        <p style="margin-top: 20px;">
+            <a href="declaration.html">Read Terms & Conditions of PAN Card Information</a>
+        </p>
+    </div>x
+</div>
+
+<script>
+    function uploadPAN() {
+        const panNumber = document.getElementById('pan-number').value;
+        const fullName = document.getElementById('full-name').value;
+        const fileInput = document.getElementById('upload-pan').value;
+        const declaration = document.getElementById('declaration').checked;
+
+        if (panNumber.trim() === '' || fullName.trim() === '' || fileInput.trim() === '') {
+            alert('Please fill all required fields and upload the PAN Card Photo.');
+            return;
+        }
+
+        if (!declaration) {
+            alert('You must agree to the declaration before uploading.');
+            return;
+        }
+
+        alert('Your PAN Card details have been submitted successfully (Just Demo).');
+    }
+</script>
+
+</body>
+</html>

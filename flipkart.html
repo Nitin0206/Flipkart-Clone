@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Clone</title>
+    <link rel="stylesheet" href="flipkart.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">Nitin's Flipkart <span>Clone</span></div>
+            <input type="text" id="search" placeholder="Search for Products, Brands and More">
+            <div class="menu">
+                <a href="seller.html">Become a Seller</a>
+                <a href="cart.html">Cart</a>
+                <div class="profile-menu">
+                    <a href="#">Profile ▼</a>
+                    <div class="dropdown">
+                        <div class="dropdown-btn" onclick="toggleDropdown()">Nitin ▼</div>
+                        <div class="dropdown-content" id="dropdownContent">
+                            <a href="profile.html">My Profile</a>
+                            <a href="supercoin.html">SuperCoin Zone</a>
+                            <a href="plus.html">Flipkart Plus Zone</a>
+                            <a href="orders.html">Orders</a>
+                            <a href="wishlist.html">Wishlist</a>
+                            <a href="coupons.html">Coupons</a>
+                            <a href="gift-cards.html">Gift Cards</a>
+                            <a href="notifications.html">Notifications</a>
+                            <a href="logout.html">Logout</a>
+                        </div>
+                    </div>
+                </div>  
+            </div>      
+        </div>
+    </header>
+
+    <script>
+        function toggleDropdown() {
+            var dropdown = document.getElementById('dropdownContent');
+            if (dropdown.style.display === 'block') {
+                dropdown.style.display = 'none';
+            } else {
+                dropdown.style.display = 'block';
+            }
+        }
+    
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropdown-btn')) {
+                var dropdown = document.getElementById('dropdownContent');
+                if (dropdown.style.display === 'block') {
+                    dropdown.style.display = 'none';
+                }
+            }
+        }
+    </script>
+
+    <section class="categories">
+        <a href="mobiles.html" class="category">Mobiles</a>
+        <a href="laptop.html" class="category">Laptops</a>
+        <a href="fashion.html" class="category">Fashion</a>
+        <a href="electronics.html" class="category">Electronics</a>
+        <a href="home-furniture.html" class="category">Home & Furniture</a>
+        <a href="appliances.html" class="category">Appliances</a>
+        <a href="toys.html" class="category">Toys</a>
+        <a href="beauty.html" class="category">Beauty</a>
+    </section>
+
+    <section class="banner">
+        <img src="banner.jpg" alt="Sale Banner">
+    </section>
+
+    <main>
+        <h2>What's Trending</h2>
+        <div class="electronics-section">
+            <div class="row1">
+                <div class="product">
+                    <a href="mobiles.html">
+                        <img src="smartphone.jpeg">
+                        <h4>Mobiles</h4></a>
+                        <p>From 11,999/-</p>
+                    
+                </div>
+        
+                <div class="product">
+                    <a href="laptop.html">
+                        <img src="laptop.jpeg">
+                        <h4>Laptops</h4></a>
+                        <p>From 11,999/-</p>
+                    
+                </div>
+        
+                <div class="product">
+                    <a href="fashion.html">
+                        <img src="fashion.jpeg">
+                        <h4>Fashion</h4></a>
+                        <p>From 999/-</p>
+                    
+                </div>
+        
+                <div class="product">
+                    <a href="electronics.html">
+                        <img src="electronics.jpeg">
+                        <h4>Electronics</h4></a>
+                        <p>From 2,999/-</p>
+                    
+                </div>
+            </div>
+            <br>
+
+            <div class="row2">
+                <div class="product">
+                    <a href="home-furniture.html">
+                        <img src="home.jpeg">
+                        <h4>Home & Furnitures</h4></a>
+                        <p>From 1,999/-</p>
+                    
+                </div>
+        
+                <div class="product">
+                    <a href="appliances.html">
+                        <img src="appliances.jpeg">
+                        <h4>Appliances</h4></a>
+                        <p>From 1,199/-</p>
+                    
+                </div>
+        
+                <div class="product">
+                    <a href="toys.html">
+                        <img src="toys.jpeg">
+                        <h4>Toys</h4></a>
+                        <p>From 499/-</p>
+                    
+                </div>
+        
+                <div class="product">
+                    <a href="beauty.html">
+                        <img src="beauty.jpeg">
+                        <h4>Beauty</h4></a>
+                        <p>From 199/-</p>
+                    
+                </div>
+            </div>
+            <br>
+
+            <div class="row3">
+                <div class="product">
+                    <a href="tw.html">
+                        <img src="tw.jpeg">
+                        <h4>Two Wheelers</h4></a>
+                        <p>From 72,000/-</p>
+                </div>
+        
+                <div class="product">
+                    <a href="fb.html">
+                        <img src="fb.jpeg">
+                        <h4>Flight Bookings</h4></a>
+                        <p>At Minimum Costs</p>
+                </div>
+
+                <div class="product">
+                    <a href="grocery.html">
+                        <img src="grocery.jpeg">
+                        <h4>Groceries</h4></a>
+                        <p>From 499/-</p>
+                </div>
+        
+                <div class="product">
+                    <a href="Health Care.html">
+                        <img src="HC.jpeg">
+                        <h4>Health Care</h4></a>
+                        <p>From 199/-</p>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+    <script src="flipkart.js"></script>
+</body>
+</html>

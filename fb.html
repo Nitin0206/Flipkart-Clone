@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking - Flipkart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 60%;
+            margin: 50px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="date"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .radio-group {
+            margin-bottom: 20px;
+        }
+
+        .radio-group input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .section {
+            margin-bottom: 15px;
+        }
+
+        .travellers-class-box {
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .traveller-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .traveller-box input[type="number"] {
+            width: 50px;
+        }
+
+        .cabin-class input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .btn {
+            background-color: #2874f0;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0d47a1;
+        }
+
+        #return-date {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Flight Booking</h2>
+
+    <div class="radio-group">
+        <input type="radio" name="trip-type" id="one-way" checked onclick="toggleReturnDate()"> One Way
+        <input type="radio" name="trip-type" id="round-trip" onclick="toggleReturnDate()"> Round Trip
+    </div>
+
+    <div class="section">
+        <label>From</label>
+        <input type="text" placeholder="Enter Departure City">
+    </div>
+    
+    <div class="section">
+        <label>To</label>
+        <input type="text" placeholder="Enter Destination City">
+    </div>
+
+    <div class="section">
+        <label>Depart On</label>
+        <input type="date">
+    </div>
+
+    <div class="section" id="return-date">
+        <label>Return On</label>
+        <input type="date">
+    </div>
+
+    <div class="section">
+        <label>Travellers & Class</label>
+        <div class="travellers-class-box">
+            <div class="traveller-box">
+                <span>Adults (12+)</span>
+                <input type="number" min="0" value="1">
+            </div>
+            <div class="traveller-box">
+                <span>Children (2-12)</span>
+                <input type="number" min="0" value="0">
+            </div>
+            <div class="traveller-box">
+                <span>Infants (below 2)</span>
+                <input type="number" min="0" value="0">
+            </div>
+
+            <h4>Cabin Class:</h4>
+            <div class="cabin-class">
+                <input type="radio" name="class" checked> Economy
+                <input type="radio" name="class"> Premium Economy
+                <input type="radio" name="class"> Business
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <button class="btn">Search Flights</button>
+    </div>
+</div>
+
+<script>
+    function toggleReturnDate() {
+        var returnDate = document.getElementById("return-date");
+        if (document.getElementById("round-trip").checked) {
+            returnDate.style.display = "block";
+        } else {
+            returnDate.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
